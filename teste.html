@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite para Encontro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Cor de fundo preta */
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        img {
+            width: 250px; /* Ajuste do tamanho da imagem para ficar pequena */
+            height: auto;
+            margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+        }
+        h1 {
+            font-size: 1.5em; /* Tamanho do texto ajustado */
+            margin-bottom: 30px;
+        }
+        /* Estilo para colorir cada letra */
+        .letra {
+            display: inline-block;
+            font-weight: bold;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #fff;
+            color: #ff69b4; /* Cor do texto do botão */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493;
+            color: #fff;
+        }
+        #botaoNao {
+            background-color: #fff;
+            color: #00bfff; /* Cor azul para o botão "Não" */
+        }
+        #botaoNao:hover {
+            background-color: #00bfff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Imagem acima do texto -->
+<img src="https://i.pinimg.com/736x/be/8a/53/be8a5318c2b4ad8b3595dd8676cc8edc.jpg" alt="Imagem do convite">
+
+<h1>
+    <!-- Texto com letras de cores alternadas -->
+    Chambinha, topa sair comigo na minha folga?
+</h1>
+
+<!-- Botões -->
+<button onclick="irParaLink()">Sim!</button>
+<button id="botaoNao" onclick="fugirNao()">Não!</button>
+
+<script>
+    // Função para redirecionar ao clicar em "Sim"
+    function irParaLink() {
+        window.location.href = "https://www.youtube.com/watch?v=izGwDsrQ1eQ";
+    }
+
+    // Função para fazer o botão "Não" se mover
+    function fugirNao() {
+        var botaoNao = document.getElementById('botaoNao');
+        var randomX = Math.floor(Math.random() * 80) + 10; // Gera um valor aleatório de posição X
+        var randomY = Math.floor(Math.random() * 80) + 10; // Gera um valor aleatório de posição Y
+        botaoNao.style.position = 'absolute';
+        botaoNao.style.left = randomX + '%'; // Define a posição X
+        botaoNao.style.top = randomY + '%';  // Define a posição Y
+    }
+</script>
+
+</body>
+</html>
